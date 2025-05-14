@@ -1,0 +1,507 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  background: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+}
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 0.5rem 2rem;
+}
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #ffd700 !important;
+}
+.nav-link {
+  color: #fff !important;
+  font-weight: 400;
+  margin: 0 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.nav-link:hover {
+  color: #ffd700 !important;
+  transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
+    no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+  z-index: 1;
+  padding: 2rem;
+}
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.hero .btn {
+  background: #ffd700;
+  color: #000;
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.hero .btn:hover {
+  background: #e6c200;
+  animation: pulse 1s infinite;
+}
+
+/* About Section */
+.about {
+  padding: 5rem 0;
+  background: #fff;
+}
+.about h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Properties Section */
+.properties {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+.properties h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.property-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.property-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.property-card:hover img {
+  transform: scale(1.1);
+}
+.property-card .card-body {
+  background: #fff;
+  padding: 1.5rem;
+}
+.property-card .card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #000;
+}
+.property-card .card-text {
+  color: #555;
+}
+.property-card .btn {
+  background: #000;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+.property-card .btn:hover {
+  background: #ffd700;
+  color: #000;
+  animation: pulse 1s infinite;
+}
+
+/* Statistics Section */
+.statistics {
+  padding: 5rem 0;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.statistics h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.stat-item {
+  padding: 1rem;
+}
+.stat-item h3 {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.stat-item:hover h3 {
+  transform: scale(1.1);
+}
+.stat-item p {
+  font-size: 1.2rem;
+}
+
+/* Amenities Section */
+.amenities {
+  padding: 5rem 0;
+  background: url("https://images.unsplash.com/photo-1512917774080-9991f7c4c750")
+    no-repeat center center/cover;
+  background-attachment: fixed;
+  color: #fff;
+  position: relative;
+}
+.amenities::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.amenities-content {
+  position: relative;
+  z-index: 1;
+}
+.amenities h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.amenity-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+.amenity-item i {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease;
+}
+.amenity-item:hover i {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 5rem 0;
+  background: #fff;
+}
+.gallery h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.gallery img:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Virtual Tour Section */
+.virtual-tour {
+  padding: 5rem 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+.virtual-tour h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.virtual-tour .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  transition: transform 0.3s ease;
+}
+.virtual-tour .video-container:hover {
+  transform: scale(1.02);
+}
+.virtual-tour .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 5rem 0;
+  background: #fff;
+}
+.testimonials h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.testimonial-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+.testimonial-card img:hover {
+  transform: scale(1.1);
+}
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+}
+.testimonial-card h5 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 5rem 0;
+  background: #000;
+  color: #fff;
+}
+.contact h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact .form-control {
+  border-radius: 0;
+  margin-bottom: 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  transition: transform 0.3s ease;
+}
+.contact .form-control:focus {
+  transform: scale(1.02);
+}
+.contact .form-control::placeholder {
+  color: #aaa;
+}
+.contact .btn {
+  background: #ffd700;
+  color: #000;
+  padding: 0.8rem 2rem;
+  transition: background 0.3s ease;
+}
+.contact .btn:hover {
+  background: #e6c200;
+  animation: pulse 1s infinite;
+}
+.contact-info i {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+.contact-info i:hover {
+  transform: rotate(360deg);
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+.footer a {
+  color: #ffd700;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #e6c200;
+}
+.footer .bi {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: transform 0.5s ease;
+}
+.footer .bi:hover {
+  transform: rotate(360deg);
+}
+
+/* Modal Styles */
+.modal-content {
+  background: #fff;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease;
+}
+.modal-header {
+  background: #000;
+  color: #fff;
+  border-bottom: none;
+}
+.modal-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+}
+.modal-body {
+  padding: 2rem;
+}
+.modal-body .form-control {
+  border-radius: 0;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+.modal-body .form-control:focus {
+  transform: scale(1.02);
+}
+.modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+.modal .btn-primary {
+  background: #ffd700;
+  color: #000;
+  border: none;
+  padding: 0.8rem 2rem;
+  transition: background 0.3s ease;
+}
+.modal .btn-primary:hover {
+  background: #e6c200;
+  animation: pulse 1s infinite;
+}
+.modal .btn-close {
+  filter: invert(1);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+  .amenities {
+    background-attachment: scroll;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .about h2,
+  .properties h2,
+  .statistics h2,
+  .amenities h2,
+  .gallery h2,
+  .virtual-tour h2,
+  .testimonials h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .property-card img {
+    height: 200px;
+  }
+  .gallery img {
+    height: 150px;
+  }
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+}
