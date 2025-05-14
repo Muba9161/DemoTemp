@@ -8,12 +8,13 @@ body {
 /* Navbar */
 .navbar {
   background: rgba(0, 0, 0, 0.8);
-  padding: 1rem 2rem;
+  padding: 1rem 1rem; /* Reduced padding for mobile */
   transition: all 0.3s ease;
+  width: 100vw;
 }
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.95);
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
 }
 .navbar-brand {
   font-family: "Playfair Display", serif;
@@ -29,6 +30,19 @@ body {
 .nav-link:hover {
   color: #ffd700 !important;
   transform: translateY(-3px);
+}
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  z-index: 1000;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-collapse {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 1rem;
 }
 
 /* Hero Section */
@@ -503,5 +517,25 @@ body {
   }
   .stat-item h3 {
     font-size: 2rem;
+  }
+  .navbar {
+    padding: 0.5rem 0.5rem; /* Further reduced padding for mobile */
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .navbar-toggler {
+    margin-right: 0.5rem; /* Ensure toggler stays within viewport */
+  }
+  .navbar-collapse {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .navbar-toggler {
+    padding: 0.25rem 0.25rem;
+  }
+  .navbar-brand {
+    font-size: 1.3rem;
   }
 }
